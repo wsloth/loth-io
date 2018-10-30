@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-portfolio-cara",
-  "description": "Gatsby Starter Portfolio Cara",
+  "name": "loth-io",
+  "description": "Loth.io personal website.",
   "version": "2.0.0",
-  "author": "LekoArts <hello@lekoarts.de>",
+  "author": "Wessel Loth <wessel@loth.io>",
   "license": "MIT",
   "dependencies": {
     "babel-plugin-tailwind": "^0.1.10",
@@ -30,11 +30,6 @@
     "typeface-open-sans": "^0.0.54",
     "typeface-playfair-display": "0.0.54"
   },
-  "keywords": [
-    "gatsby",
-    "starter",
-    "portfolio"
-  ],
   "scripts": {
     "develop": "gatsby develop -o",
     "build": "gatsby build",
