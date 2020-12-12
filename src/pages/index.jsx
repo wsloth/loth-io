@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* global tw */
 import React from 'react';
 import styled from 'react-emotion';
@@ -13,17 +14,17 @@ import { rotate, UpDown, UpDownWide, waveAnimation } from '../styles/animations'
 import { hidden } from '../styles/utils';
 import { colors } from '../../tailwind';
 import triangle from '../images/triangle.svg';
-import avatar from '../images/avatar.png';
+import avatar from '../images/profile.jpeg';
 import arcady from '../images/arcady.svg';
 import '../styles/global';
 
 const Divider = styled(ParallaxLayer)`
   ${tw('absolute w-full h-full')};
-  background: ${props => props.bg};
+  background: ${(props) => props.bg};
   svg {
-    fill: ${props => props.fill};
+    fill: ${(props) => props.fill};
   }
-  clip-path: ${props => props.clipPath};
+  clip-path: ${(props) => props.clipPath};
 `;
 
 const DividerMiddle = styled(Divider)`
@@ -66,20 +67,6 @@ const Title = styled.h1`
 const Subtitle = styled.p`
   ${tw('text-2xl lg:text-4xl font-sans text-white mt-8 xxl:w-3/4')};
   text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-`;
-
-const ProjectsWrapper = styled.div`
-  ${tw('flex flex-wrap justify-between mt-8')};
-  display: grid;
-  grid-gap: 4rem;
-  grid-template-columns: repeat(2, 1fr);
-  @media (max-width: 1200px) {
-    grid-gap: 3rem;
-  }
-  @media (max-width: 900px) {
-    grid-template-columns: 1fr;
-    grid-gap: 2rem;
-  }
 `;
 
 const WaveWrapper = styled.div`
@@ -172,31 +159,30 @@ const Index = () => (
           <BigTitle>
             Hello, <br /> I'm Wessel Loth.
           </BigTitle>
-          <Subtitle>I create useful software with elegant code, clever algorithms and solid data structures.</Subtitle>
+          <Subtitle>👉 I'm a full stack techno-wizard that cares about improving the engineering culture in your organisation.</Subtitle>
         </Hero>
       </Content>
-      <DividerMiddle
-        bg="linear-gradient(to right, #00537E 0%, #3AA17E 100%)"
-        speed={-0.2}
-        offset={1.1}
-        factor={2}
-      />
+      <DividerMiddle bg="linear-gradient(to right, #00537E 0%, #3AA17E 100%)" speed={-0.2} offset={1.1} factor={2} />
       <Content speed={0.4} offset={1.2} factor={2}>
         <Inner>
           <Title>About</Title>
-            <AboutHero>
-              <Avatar src={avatar} alt="Arcady" />
-              <AboutSub>
-                "You can usually find me behind my computer, playing fetch with my dog or driving my lovely car around the Netherlands."
-              </AboutSub>
-            </AboutHero>
-            <AboutDesc>
-              Ever since I was young I loved playing around with computers, modifying games and creating silly applications.
-              This passion has grown into my career, where I now help companies build maintainable systems that are engineered
-              to the highest standards. Although I love to make a frontend look beautiful and smooth, I also have a strive
-              to know everything there is to know about backends, databases &amp; cloud.
-              Tools I love to use include Angular, .NET, Azure and many, many more!
-            </AboutDesc>
+          <AboutHero>
+            <Avatar src={avatar} alt="Me" />
+            <AboutSub>
+              "You can usually find me behind my computer, playing fetch with my dog or fine-tuning my special lasagne recipe."
+            </AboutSub>
+          </AboutHero>
+          <AboutDesc>
+            Ever since I was young I loved playing around with computers, modifying games and creating silly applications. This passion has
+            grown into my career, where I now help companies build maintainable systems that are engineered to the highest standards.
+            Although I love to make a frontend look beautiful and smooth, I also strive to know everything there is to know about
+            microservices, databases &amp; cloud-native development.
+          </AboutDesc>
+          <AboutDesc>
+            Tools I love to use include .NET Core, Angular, Azure and many, many more! But while I love using them, nothing beats{' '}
+            <strong>adding value</strong> with the right tool for the right job. In projects, you'll often find me coaching and mentoring
+            developers to help them grow further.
+          </AboutDesc>
         </Inner>
       </Content>
       <Divider speed={0.1} offset={1} factor={2}>
@@ -245,15 +231,19 @@ const Index = () => (
         <Inner>
           <Title>Work</Title>
           <JobHero>
-            <a href="https://arcady.nl" target="_blank">
+            <a href="https://arcady.nl" target="_blank" rel="noreferrer noopener">
               <JobLogo src={arcady} alt="Arcady Logo" />
             </a>
             <AboutSub>
-              Arcady is a small Dutch consultancy company, with a focus on being market leaders in Full Stack development.
+              Arcady is a Dutch IT consultancy company. We are Future-builders, Rebels and Value-adders. Guiding tomorrow's technology. We
+              help companies prepare for the future.
             </AboutSub>
           </JobHero>
           <JobDescription>
-            Interested to hear more about Arcady? Visit <Link href="https://arcady.nl" target="_blank">our website</Link> to learn more.
+            Interested in hiring my expertise, or learning more about Arcady? Visit{' '}
+            <Link href="https://arcady.nl" target="_blank">
+              our website.
+            </Link>
           </JobDescription>
         </Inner>
       </Content>
@@ -275,17 +265,25 @@ const Index = () => (
       </Divider>
       <Content speed={0.4} offset={4}>
         <Inner>
-          <Title>Get in touch</Title>
+          <Title>Where to find me</Title>
           <ContactText>
-            <Link href="mailto:wessel@loth.io">E-mail</Link> me or find me on{' '}
-            <Link href="https://github.com/wsloth" target="_blank">GitHub</Link>{', '}
-            <Link href="https://twitter.com/WesselLoth" target="_blank">Twitter</Link>{', '}
-            <Link href="https://www.instagram.com/wloth/" target="_blank">Instagram</Link> or{' '}
-            <Link href="https://www.linkedin.com/in/wessel-loth-6a094bb6/" target="_blank">LinkedIn</Link>.
+            <Link href="mailto:wessel@loth.io">E-mail</Link> me, or find me on{' '}
+            <Link href="https://github.com/wsloth" target="_blank">
+              GitHub
+            </Link>
+            {', '}
+            <Link href="https://twitter.com/WesselLoth" target="_blank">
+              Twitter
+            </Link>{' '}
+            or{' '}
+            <Link href="https://www.linkedin.com/in/wessel-loth-6a094bb6/" target="_blank">
+              LinkedIn
+            </Link>
+            .
           </ContactText>
         </Inner>
         <Footer>
-          &copy; {new Date().getFullYear()} Wessel Loth | <Link href="https://github.com/wsloth/loth-io">Github Repository</Link>.
+          &copy; 2021 Wessel Loth | <Link href="https://github.com/wsloth/loth-io">Github Repository</Link>.
         </Footer>
       </Content>
       <Divider speed={0.1} offset={4}>
